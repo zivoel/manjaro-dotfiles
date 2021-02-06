@@ -22,17 +22,17 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 
 
-unzip $HOME/zivoel_manjaro/dotfiles/oh-my-zsh/oh-my-zsh.zip
-cp -a -f -r $HOME/zivoel_manjaro/dotfiles/oh-my-zsh/.*   $HOME/
-cp -a -f -r $HOME/zivoel_manjaro/dotfiles/*   $HOME/.config/
+#unzip $HOME/zivoel_manjaro/dotfiles/oh-my-zsh/oh-my-zsh.zip
+#cp -a -f -r $HOME/zivoel_manjaro/dotfiles/oh-my-zsh/.*   $HOME/
+#cp -a -f -r $HOME/zivoel_manjaro/dotfiles/*   $HOME/.config/
 
 # configurating some scripts
-chmod +x $HOME/.config/i3/blocks/*
-chmod +x $HOME/.config/rofi/scripts/*
-chmod +x $HOME/.config/my_scripts/*.sh
+#chmod +x $HOME/.config/i3/blocks/*
+#chmod +x $HOME/.config/rofi/scripts/*
+#chmod +x $HOME/.config/my_scripts/*.sh
 
 
-#
+#.oh-my-zsh
 cd $HOME/.oh-my-zsh/plugins/
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
