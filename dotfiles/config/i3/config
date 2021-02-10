@@ -141,7 +141,8 @@ assign [class="firefox"]            $workspace1
 #assign [class="Org.gnome.Nautilus"] $workspace3
 assign [class="vlc"]                $workspace4 
 assign [class="Code"]               $workspace5
-assign [class="Spotify"]            $workspace6
+assign [class="Spotify Free"]            $workspace6
+assign [class="spotify"]            $workspace6
 
 # workspace default monitors
 workspace $workspace1   output  HDMI-1
@@ -182,16 +183,16 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym h resize shrink width   30 px or 30 ppt
-        bindsym k resize grow height    30 px or 30 ppt
-        bindsym j resize shrink height  30 px or 30 ppt
-        bindsym l resize grow width     30 px or 30 ppt
+        bindsym h resize shrink width   10 px or 10 ppt
+        bindsym k resize grow height    10 px or 10 ppt
+        bindsym j resize shrink height  10 px or 10 ppt
+        bindsym l resize grow width     10 px or 10 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width    30 px or 30 ppt
-        bindsym Down resize grow height     30 px or 30 ppt
-        bindsym Up resize shrink height     30 px or 30 ppt
-        bindsym Right resize grow width     30 px or 30 ppt
+        bindsym Left resize shrink width    10 px or 10 ppt
+        bindsym Down resize grow height     10 px or 10 ppt
+        bindsym Up resize shrink height     10 px or 10 ppt
+        bindsym Right resize grow width     10 px or 10 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -269,9 +270,12 @@ exec_always feh --bg-scale ~/.config/wallpapers/wallpaper_2.png
 exec_always xrandr --output VGA-1 --mode 1360x768 --pos 0x312 --rotate normal --output DVI-D-1 --off --output HDMI-1 --primary --mode 1920x1080 --pos 1360x0 --rotate normal
 
 # start rofi (a program launcher)
-bindsym $mod+d exec rofi -icon-theme "Papirus" -show-icons -columns 1 -show drun -font 'Hack 15' -theme gruvbox-theme.rasi 
-bindsym $mod+p exec rofi -icon-theme "Papirus" -show-icons -columns 1 -show window -font 'Hack 15' -theme gruvbox-theme.rasi 
-bindsym $mod+shift+p exec ~/.config/rofi/scripts/tmux_session -columns 1 -show window -icon-theme "Papirus" -show-icons -font 'Hack 15' -theme gruvbox-theme.rasi 
+#bindsym $mod+d exec "rofi -icon-theme 'Papirus' -show-icons -columns 1 -show drun -font 'Hack 15' -theme gruvbox-theme.rasi"
+bindsym $mod+p exec "rofi -modi 'drun,window' -icon-theme 'Papirus' -show-icons -columns 1  -font 'Hack 15' -theme gruvbox-theme.rasi" 
+bindsym $mod+shift+p exec ~/.config/rofi/scripts/tmux_session -columns 1 -show window -icon-theme 'Papirus' -show-icons -font 'Hack 15' -theme gruvbox-theme.rasi
+
+bindsym $mod+d exec dmenu_run -b 
+#bindsym $mod+d exec ~/.config/my_scripts/rofi.sh  dmenu_run -b 
 
 # Media player controls
 bindsym XF86AudioPlay   exec playerctl play
