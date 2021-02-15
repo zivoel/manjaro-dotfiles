@@ -273,10 +273,10 @@ smart_gaps on
 # picom
 exec_always picom -CGb --config ~/.config/picom/picom.conf
 
-# test
+# other workspaces 
 
 # workspace variables 
-set $ws2_1 "Spotify"
+set $ws2_1 "11"
 set $ws2_2 "12"
 set $ws2_3 "13"
 set $ws2_4 "14"
@@ -299,9 +299,7 @@ workspace $ws2_8   output  HDMI-1
 workspace $ws2_9   output  HDMI-1
 workspace $ws2_0   output  HDMI-1
 
-#assign workspaces
-#for_window [class="Spotify"] move to workspace $ws2_1
-
+# switch to workspace
 set $mode_workspace "+switch"
 mode $mode_workspace{
 bindsym 1 workspace $ws2_1; mode "default"
@@ -320,7 +318,8 @@ bindsym Escape mode "default"
 }
 bindsym $mod+p mode "+switch"
 
-set $move_workspace $mode_workspace
+# move to workspace
+set $move_workspace "+move" 
 mode $move_workspace {
     bindsym 1 move container to workspace $ws2_1; mode "default"
     bindsym 2 move container to workspace $ws2_2; mode "default"
@@ -336,4 +335,4 @@ mode $move_workspace {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+shift+p mode $move_workspace
+bindsym $mod+shift+p mode "+move"
