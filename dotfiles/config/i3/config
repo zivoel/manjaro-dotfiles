@@ -133,7 +133,6 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 
 #assign workspaces
 assign [class="firefox"]    $ws1
-assign [class="vlc"]        $ws4 
 assign [class="Code"]       $ws5
 
 # workspace default monitors
@@ -206,7 +205,7 @@ hide_edge_borders both
 
 bar {	
         id bar-0
-        tray_output none 
+        tray_output HDMI-1 
         output HDMI-1
         position top
         status_command i3blocks -c ~/.config/i3/i3blocks_bar0.conf
@@ -227,7 +226,7 @@ colors {
 
 bar {
     position top
-    tray_output VGA-1
+    tray_output none 
     output VGA-1
     status_command i3blocks -c ~/.config/i3/i3blocks_bar1.conf
     id bar-1
@@ -276,8 +275,8 @@ exec_always picom -CGb --config ~/.config/picom/picom.conf
 # other workspaces 
 
 # workspace variables 
-set $ws2_1 "11"
-set $ws2_2 "12"
+set $ws2_1 "vlc"
+set $ws2_2 "qbittorent"
 set $ws2_3 "13"
 set $ws2_4 "14"
 set $ws2_5 "15"
@@ -286,6 +285,10 @@ set $ws2_7 "17"
 set $ws2_8 "18"
 set $ws2_9 "19"
 set $ws2_0 "20"
+
+#assign workspaces
+assign [class="vlc"]            $ws2_1 
+assign [class="qBittorrent"]    $ws2_2
 
 # workspace default monitors
 workspace $ws2_1   output  HDMI-1
