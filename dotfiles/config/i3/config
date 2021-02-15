@@ -274,38 +274,64 @@ smart_gaps on
 exec_always picom -CGb --config ~/.config/picom/picom.conf
 
 # test
-set $mode_workspace "wswitch"
+
+# workspace variables 
+set $ws2_1 "Spotify"
+set $ws2_2 "2"
+set $ws2_3 "3"
+set $ws2_4 "4"
+set $ws2_5 "5"
+set $ws2_6 "6"
+set $ws2_7 "7"
+set $ws2_8 "8"
+set $ws2_9 "9"
+set $ws2_0 "10"
+
+# workspace default monitors
+workspace $ws2_1   output  HDMI-1
+workspace $ws2_2   output  HDMI-1 
+workspace $ws2_3   output  HDMI-1
+workspace $ws2_4   output  HDMI-1
+workspace $ws2_5   output  HDMI-1
+workspace $ws2_6   output  HDMI-1
+workspace $ws2_7   output  HDMI-1
+workspace $ws2_8   output  HDMI-1
+workspace $ws2_9   output  HDMI-1
+workspace $ws2_0   output  HDMI-1
+
+
+set $mode_workspace "+switch"
 mode $mode_workspace{
-bindsym 1 workspace 11; mode "default"
-bindsym 2 workspace 12; mode "default"
-bindsym 3 workspace 13; mode "default"
-bindsym 4 workspace 14; mode "default"
-bindsym 5 workspace 15; mode "default"
-bindsym 6 workspace 16; mode "default"
-bindsym 7 workspace 17; mode "default"
-bindsym 8 workspace 18; mode "default"
-bindsym 9 workspace 19; mode "default"
-bindsym 0 workspace 20; mode "default"
+bindsym 1 workspace $ws2_1; mode "default"
+bindsym 2 workspace $ws2_2; mode "default"
+bindsym 3 workspace $ws2_3; mode "default"
+bindsym 4 workspace $ws2_4; mode "default"
+bindsym 5 workspace $ws2_5; mode "default"
+bindsym 6 workspace $ws2_6; mode "default"
+bindsym 7 workspace $ws2_7; mode "default"
+bindsym 8 workspace $ws2_8; mode "default"
+bindsym 9 workspace $ws2_9; mode "default"
+bindsym 0 workspace $ws2_0; mode "default"
 # ....
 bindsym Return mode "default"
 bindsym Escape mode "default"
 }
-bindsym $mod+p mode "wswitch"
+bindsym $mod+p mode "+switch"
 
-set $mode_move_to_workspace "wmove"
-mode $mode_move_to_workspace {
-    bindsym 1 move container to workspace 11; mode "default"
-    bindsym 2 move container to workspace 12; mode "default"
-    bindsym 3 move container to workspace 13; mode "default"
-    bindsym 4 move container to workspace 14; mode "default"
-    bindsym 5 move container to workspace 15; mode "default"
-    bindsym 6 move container to workspace 16; mode "default"
-    bindsym 7 move container to workspace 17; mode "default"
-    bindsym 8 move container to workspace 18; mode "default"
-    bindsym 9 move container to workspace 19; mode "default"
-    bindsym 0 move container to workspace 20; mode "default"
+set $move_workspace $mode_workspace
+mode $move_workspace {
+    bindsym 1 move container to workspace $ws2_1; mode "default"
+    bindsym 2 move container to workspace $ws2_2; mode "default"
+    bindsym 3 move container to workspace $ws2_3; mode "default"
+    bindsym 4 move container to workspace $ws2_4; mode "default"
+    bindsym 5 move container to workspace $ws2_5; mode "default"
+    bindsym 6 move container to workspace $ws2_6; mode "default"
+    bindsym 7 move container to workspace $ws2_7; mode "default"
+    bindsym 8 move container to workspace $ws2_8; mode "default"
+    bindsym 9 move container to workspace $ws2_9; mode "default"
+    bindsym 0 move container to workspace $ws2_0; mode "default"
 # ....
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+shift+p mode $mode_move_to_workspace
+bindsym $mod+shift+p mode $move_workspace
