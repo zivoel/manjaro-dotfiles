@@ -300,7 +300,7 @@ workspace $ws2_9   output  HDMI-1
 workspace $ws2_0   output  HDMI-1
 
 # switch to workspace
-set $mode_workspace "+switch"
+set $mode_workspace "switch"
 mode $mode_workspace{
 bindsym 1 workspace $ws2_1; mode "default"
 bindsym 2 workspace $ws2_2; mode "default"
@@ -316,10 +316,10 @@ bindsym 0 workspace $ws2_0; mode "default"
 bindsym Return mode "default"
 bindsym Escape mode "default"
 }
-bindsym $mod+p mode "+switch"
+bindsym $mod+p mode "switch"
 
 # move to workspace
-set $move_workspace "+move" 
+set $move_workspace "move" 
 mode $move_workspace {
     bindsym 1 move container to workspace $ws2_1; mode "default"
     bindsym 2 move container to workspace $ws2_2; mode "default"
@@ -335,4 +335,4 @@ mode $move_workspace {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+shift+p mode "+move"
+bindsym $mod+shift+p mode "move"
