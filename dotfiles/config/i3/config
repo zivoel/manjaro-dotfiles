@@ -277,15 +277,15 @@ exec_always picom -CGb --config ~/.config/picom/picom.conf
 
 # workspace variables 
 set $ws2_1 "Spotify"
-set $ws2_2 "2"
-set $ws2_3 "3"
-set $ws2_4 "4"
-set $ws2_5 "5"
-set $ws2_6 "6"
-set $ws2_7 "7"
-set $ws2_8 "8"
-set $ws2_9 "9"
-set $ws2_0 "10"
+set $ws2_2 "12"
+set $ws2_3 "13"
+set $ws2_4 "14"
+set $ws2_5 "15"
+set $ws2_6 "16"
+set $ws2_7 "17"
+set $ws2_8 "18"
+set $ws2_9 "19"
+set $ws2_0 "20"
 
 # workspace default monitors
 workspace $ws2_1   output  HDMI-1
