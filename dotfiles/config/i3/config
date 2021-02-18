@@ -41,8 +41,8 @@ bindsym $mod+Return exec kitty
 bindsym $mod+Shift+q kill
 
 # start dmenu or rofi (a program launcher)
-bindsym $mod+d exec --no-startup-id "rofi -modi drun,run,window,file-browser -show drun -columns 2 -theme gruvbox-theme.rasi -font 'hack 15' -icon-theme 'Papirus' -show-icons -sidebar-mode"
-#bindsym $mod+d exec --no-startup-id dmenu_run 
+bindsym $mod+d exec --no-startup-id "rofi -modi drun,window -show drun -columns 2 -theme gruvbox-theme.rasi -font 'hack 15' -icon-theme 'Papirus' -show-icons -sidebar-mode"
+#bindsym $mod+d exec --no-startup-id "rofi -modi drun,run,window,file-browser -show drun -columns 2 -theme gruvbox-theme.rasi -font 'hack 15' -icon-theme 'Papirus' -show-icons -sidebar-mode"
 
 # change focus
 bindsym $mod+h focus left
@@ -275,11 +275,11 @@ exec_always picom -CGb --config ~/.config/picom/picom.conf
 # other workspaces 
 
 # workspace variables 
-set $ws2_1 "vlc"
-set $ws2_2 "qbittorent"
-set $ws2_3 "13"
-set $ws2_4 "14"
-set $ws2_5 "15"
+set $ws2_1 "11: firefox"
+set $ws2_2 "12: terminals"
+set $ws2_3 "13: nautilus"
+set $ws2_4 "14: vlc"
+set $ws2_5 "15: qbittorrent"
 set $ws2_6 "16"
 set $ws2_7 "17"
 set $ws2_8 "18"
@@ -287,8 +287,8 @@ set $ws2_9 "19"
 set $ws2_0 "20"
 
 #assign workspaces
-assign [class="vlc"]            $ws2_1 
-assign [class="qBittorrent"]    $ws2_2
+assign [class="vlc"]            $ws2_4 
+assign [class="qBittorrent"]    $ws2_5
 
 # workspace default monitors
 workspace $ws2_1   output  HDMI-1
